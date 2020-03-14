@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15508" systemVersion="18F203" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AllGenre" representedClassName="AllGenre" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="FavouriteMovies" representedClassName="FavouriteMovies" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="overview" optional="YES" attributeType="String"/>
+        <attribute name="rating" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="releaseDate" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="favouriteGenreFK" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GenreEntity" inverseName="favouriteGenreFK" inverseEntity="GenreEntity"/>
+    </entity>
+    <entity name="GenreEntity" representedClassName="GenreEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="genreid" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="genreName" optional="YES" attributeType="String"/>
+        <relationship name="favouriteGenreFK" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FavouriteMovies" inverseName="favouriteGenreFK" inverseEntity="FavouriteMovies"/>
+        <relationship name="movieGenreFK" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MovieEntity" inverseName="movieGenreFK" inverseEntity="MovieEntity"/>
+    </entity>
+    <entity name="MovieEntity" representedClassName="MovieEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="overview" optional="YES" attributeType="String"/>
+        <attribute name="rating" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="releaseDate" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="movieGenreFK" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GenreEntity" inverseName="movieGenreFK" inverseEntity="GenreEntity"/>
+    </entity>
+    <elements>
+        <element name="FavouriteMovies" positionX="119" positionY="316" width="128" height="28"/>
+        <element name="GenreEntity" positionX="175.66015625" positionY="120.40625" width="128" height="73"/>
+        <element name="MovieEntity" positionX="-64.6015625" positionY="98.03515625" width="128" height="148"/>
+        <element name="AllGenre" positionX="54" positionY="198" width="128" height="73"/>
+    </elements>
+</model>
