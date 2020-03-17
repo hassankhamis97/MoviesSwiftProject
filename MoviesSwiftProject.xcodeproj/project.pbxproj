@@ -401,8 +401,7 @@
 				4E0EFE192407319A0022BA76 /* MovieDetails */,
 				4E9A06A924049FF500A81C24 /* MainMovie */,
 			);
-			name = ViewController;
-			path = ../../../MoviesProject/MoviesProject/MoviesProject/ViewController;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		4E9A06A924049FF500A81C24 /* MainMovie */ = {

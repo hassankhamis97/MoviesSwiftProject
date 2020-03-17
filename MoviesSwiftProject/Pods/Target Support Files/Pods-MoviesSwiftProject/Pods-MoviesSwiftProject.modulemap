@@ -1,6 +1,0 @@
-framework module Pods_MoviesSwiftProject {
-  umbrella header "Pods-MoviesSwiftProject-umbrella.h"
-
-  export *
-  module * { export * }
-}
